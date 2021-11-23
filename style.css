@@ -14,7 +14,7 @@ header {
 }
 
 .container {
-    width: 920px;
+    max-width: 920px;
     border-radius: 20px;
     background-color: #fff;
     margin: auto;
@@ -154,7 +154,7 @@ a.light {
 
 
 
-@media (max-width: 426px) {
+@media (max-width: 840px) {
     header {
         margin-top: 40px;
         margin-bottom: 40px;
