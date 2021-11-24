@@ -130,10 +130,10 @@ a.light {
     text-align: right;
 }
 .output a {
-    color: hsl(183, 60%, 26%);
+    color: hsl(183, 100%, 15%);
     display: block;
     text-decoration: none;
-    background-color: hsl(183, 60%, 30%);
+    background-color: hsl(172, 67%, 45%);
     border-radius: 10px;
     padding: 10px;
     text-align: center;
@@ -143,8 +143,13 @@ a.light {
     cursor: pointer
 }
 .output a:hover {
-    background-color: hsl(172, 67%, 45%);
+    background-color: hsl(172, 67%, 70%);
     color: hsl(183, 100%, 15%);
+}
+
+#reset.disabled {
+    color: hsl(183, 60%, 26%);
+    background-color: hsl(183, 60%, 30%);
 }
 
 

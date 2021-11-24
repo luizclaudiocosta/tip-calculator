@@ -25,6 +25,7 @@ function setBillValue(){
         personTotal = 0
         document.getElementById('tipPerPerson').textContent = '$0.00'
         document.getElementById('totalPerPerson').textContent = '$0.00'
+        document.getElementById('reset').classList.add('disabled')
         return
 
     }
@@ -106,6 +107,7 @@ function setPeopleNumber() {
         personTotal = 0
         document.getElementById('tipPerPerson').textContent = '$0.00'
         document.getElementById('totalPerPerson').textContent = '$0.00'
+        document.getElementById('reset').classList.add('disabled')
         return
 
     }
@@ -124,12 +126,15 @@ const reset = document.getElementById('reset')
 reset.addEventListener('click', handleReset)
 
 function handleReset() {
-    let personTip = 0
-    let personTotal = 0
-    let billValue = 0
-    let tipValue = 0.15 // default by html
-    let peopleNumberValue = 0
+    personTip = 0
+    personTotal = 0
+    billValue = 0
+    tipValue = 0.15 // default by html
+    peopleNumberValue = 0
 
+    console.log('dentro', tipValue)
+
+    document.getElementById('reset').classList.add('disabled')
     document.getElementById('tipPerPerson').textContent = '$0.00'
     document.getElementById('totalPerPerson').textContent = '$0.00'
     peopleNumber.value = ''
@@ -145,7 +150,7 @@ function handleReset() {
 
 
 
-
+console.log('fora', tipValue)
 
 
 
@@ -157,6 +162,8 @@ function calculate(){
 
         personTotal = (billValue*(tipValue+1)/peopleNumberValue).toFixed(2)
         document.getElementById('totalPerPerson').textContent = '$'+personTotal
+
+        document.getElementById('reset').classList.remove('disabled')
     }
 }
 
